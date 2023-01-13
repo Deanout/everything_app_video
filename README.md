@@ -14,16 +14,16 @@ docker-compose start
 
 # Rails
 ```shell
-docker build -t app ./rails/.
+docker build -t app ./video/.
 docker volume create app-storage
 docker run -d --rm -it --name rails --env-file ./rails/.env -v app-storage:/rails/storage --network everything_app app
 ```
 
 # Rails
 ```shell
-docker build -t another_app ./video/.
+docker build -t another_app ./another/.
 docker volume create app-storage
-docker run -d --rm -it --name another --env-file ./rails/.env -v app-storage:/rails/storage --network everything_app another_app
+docker run -d --rm -it --name another --env-file ./another/.env -v app-storage:/rails/storage --network everything_app another_app
 ```
 
 # Postgres
