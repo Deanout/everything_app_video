@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# If running the rails server then create or migrate existing database
+./bin/rails db:create
+./bin/rails db:prepare
+
+exec "${@}"
