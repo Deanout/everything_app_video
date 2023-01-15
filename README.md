@@ -16,7 +16,7 @@ docker-compose start
 ```shell
 docker build -t app ./video/.
 docker volume create app-storage
-docker run -d --rm -it --name rails --env-file ./rails/.env -v app-storage:/rails/storage --network everything_app app
+docker run -d --rm -it --name video --env-file ./rails/.env -v app-storage:/rails/storage --network everything_app app
 ```
 
 # Rails
